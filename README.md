@@ -1,55 +1,88 @@
-# Mintlify Starter Kit
+# QuimEdu-Lab
 
-Use the starter kit to get your docs deployed and ready to customize.
+Plataforma educacional para Química e Bioquímica Aplicada.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Sobre
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+QuimEdu-Lab é um projeto dedicado ao ensino prático de química e bioquímica, com foco em aplicações reais e relevantes. Desenvolvemos ferramentas, tutoriais e simulações para facilitar o aprendizado.
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+## Objetivos
 
-## AI-assisted writing
+- Criar ferramentas educacionais em química molecular
+- Desenvolver calculadoras para reações químicas
+- Disponibilizar simulações interativas
+- Publicar tutoriais de bioquímica aplicada
+- Construir comunidade de aprendizagem
 
-Set up your AI coding tool to work with Mintlify:
+## Funcionalidades
+
+- Cálculos de peso molecular
+- Simulação de reações químicas
+- Base de dados de compostos
+- Análise de estruturas moleculares
+- Ferramentas de pH e concentrações
+
+## Como Começar
+
+### Pré-requisitos
+
+- Python 3.8 ou superior
+- pip (gerenciador de pacotes Python)
+
+### Instalação
 
 ```bash
-npx skills add https://mintlify.com/docs
+git clone https://github.com/TTMOR/QuimEdu-Lab.git
+cd QuimEdu-Lab
+pip install -r requirements.txt
 ```
 
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
+### Uso Básico
 
-See the [AI tools guides](/ai-tools) for tool-specific setup.
+```python
+from quimedu import Chemistry
 
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
-```
-
-Run the following command at the root of your documentation, where your `docs.json` is located:
-
-```
-mint dev
+# Exemplo de uso
+calc = Chemistry()
+peso = calc.peso_molecular("H2O")
+print(f"Peso molecular da água: {peso} g/mol")
 ```
 
-View your local preview at `http://localhost:3000`.
+## Estrutura do Projeto
 
-## Publishing changes
+```
+QuimEdu-Lab/
+├── docs/              # Documentação
+├── src/               # Código fonte
+├── tests/             # Testes
+├── examples/          # Exemplos
+└── README.md          # Este arquivo
+```
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+## Contribuindo
 
-## Need help?
+Contribuições são bem-vindas! Por favor:
 
-### Troubleshooting
+1. Fork o projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/minha-feature`)
+3. Commit suas mudanças (`git commit -m "Adiciona minha feature"`)
+4. Push para a branch (`git push origin feature/minha-feature`)
+5. Abra um Pull Request
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+## Licença
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
+
+## Autores
+
+TTMOR
+
+## Contato
+
+Para dúvidas, sugestões ou contribuições, abra uma issue ou entre em contato através do GitHub.
+
+## Recursos Adicionais
+
+- Documentação: [Mintlify Docs](https://mintlify.com/docs)
+- Química: [Khan Academy Chemistry](https://www.khanacademy.org)
+- Python: [Python Documentation](https://docs.python.org)
